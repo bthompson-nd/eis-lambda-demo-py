@@ -81,7 +81,7 @@ jobs:
         # Set strictness for lint [low, medium, high]
         strict: "medium"
         # Mypy options
-        mypy-options: "--disallow_untyped_defs --no-implicit-optional --show-error-codes --strict-equality --warn-redundant-casts --warn-unused-ignores"
+        mypy-options: "--disallow-untyped-defs --no-implicit-optional --show-error-codes --strict-equality --warn-redundant-casts --warn-unused-ignores"
         # Pylint options
         pylint-options: ""
         # Black options

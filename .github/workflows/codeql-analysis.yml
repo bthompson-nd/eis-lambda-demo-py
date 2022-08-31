@@ -88,3 +88,5 @@ jobs:
         pylint-options: ""
         # Black options
         black-options: "--check"
+        # isort options
+        isort-options: "--diff"

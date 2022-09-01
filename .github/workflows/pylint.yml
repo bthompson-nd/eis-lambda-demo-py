@@ -20,6 +20,6 @@ jobs:
         pip install pylint mypy black
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py|grep -v lambda_types')
-        mymy $(git ls-files '*.py|grep -v lambda_types') --strict
-        black $(git ls-files '*.py|grep -v lambda_types') --check
+        pylint $(git ls-files '*.py'|grep -v lambda_types)
+        mymy $(git ls-files '*.py'|grep -v lambda_types) --strict
+        black $(git ls-files '*.py'|grep -v lambda_types) --check

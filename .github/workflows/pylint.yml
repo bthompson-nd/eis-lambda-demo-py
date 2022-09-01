@@ -23,10 +23,7 @@ jobs:
         pylint $(git ls-files '*.py'|grep -v lambda_types)
     - name: Type checking the code with mypy
       run: |
-        echo $PATH
-        which pylint
-        which mypy
-        mymy $(git ls-files '*.py'|grep -v lambda_types) --strict
+        mypy $(git ls-files '*.py'|grep -v lambda_types) --strict
     - name: Checking code formatting with black
       run: |
         black $(git ls-files '*.py'|grep -v lambda_types) --check

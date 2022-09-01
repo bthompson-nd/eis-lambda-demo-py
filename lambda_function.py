@@ -1,7 +1,9 @@
-from lambda_types import LambdaDict, LambdaContext
+'''The main Lambda module'''
 import json
+from lambda_types import LambdaDict, LambdaContext
 
 
 def lambda_handler(event: LambdaDict, context: LambdaContext) -> LambdaDict:
-    # TODO implement
-    return {"statusCode": 200, "body": json.dumps("Hello from Lambda!")}
+    '''The main Lambda handler. The entry point for your logic.'''
+    return {"statusCode": 200, "body": json.dumps(dict(event=event, context=context)}
+

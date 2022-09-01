@@ -21,5 +21,9 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py'|grep -v lambda_types)
-        python -m mymy $(git ls-files '*.py'|grep -v lambda_types) --strict
-        python -m black $(git ls-files '*.py'|grep -v lambda_types) --check
+    - name: Type checking the code with mypy
+      run: |
+        mymy $(git ls-files '*.py'|grep -v lambda_types) --strict
+    - name: Checking code formatting with black
+      run: |
+        black $(git ls-files '*.py'|grep -v lambda_types) --check

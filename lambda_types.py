@@ -5,13 +5,15 @@ LambdaDict = Dict[str, Any]
 
 
 class LambdaCognitoIdentity(object):
-    '''Lambda object'''
+    """Lambda object"""
+
     cognito_identity_id: str
     cognito_identity_pool_id: str
 
 
 class LambdaClientContextMobileClient(object):
-    '''Lambda object'''
+    """Lambda object"""
+
     installation_id: str
     app_title: str
     app_version_name: str
@@ -20,14 +22,16 @@ class LambdaClientContextMobileClient(object):
 
 
 class LambdaClientContext(object):
-    '''Lambda object'''
+    """Lambda object"""
+
     client: LambdaClientContextMobileClient
     custom: LambdaDict
     env: LambdaDict
 
 
 class LambdaContext(object):
-    '''Lambda object'''
+    """Lambda object"""
+
     function_name: str
     function_version: str
     invoked_function_arn: str
@@ -40,5 +44,5 @@ class LambdaContext(object):
 
     @staticmethod
     def get_remaining_time_in_millis() -> int:
-        '''Lambda object'''
+        """Lambda object"""
         return 0

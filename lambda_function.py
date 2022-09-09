@@ -1,7 +1,7 @@
 """The main Lambda module"""
-import cx_Oracle
+import cx_Oracle # type: ignore
 import json
-import snowflake.connector
+import snowflake.connector # type: ignore
 from lambda_types import LambdaDict, LambdaContext
 
 
